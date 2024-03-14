@@ -1,0 +1,21 @@
+<h2>Lista de usuarios</h2>
+
+@if ((users$ | async); as users) {
+  <section>
+    @for (user of users; track user) {
+      <ul >
+        <li>
+          <h3>{{ user.name }}</h3>
+          <p>Nombre de usuario: {{ user.username }}</p>
+          <p>Correo electrónico: {{ user.email }}</p>
+          <h4>Dirección</h4>
+          <p>Calle: {{ user.address.street }}</p>
+          <p>Número: {{ user.address.suite }}</p>
+          <p>Ciudad: {{ user.address.city }}</p>
+          <p>Código postal: {{ user.address.zipcode }}</p>
+        </li>
+      </ul>
+    }
+  </section>
+}
+
