@@ -1,0 +1,14 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="10.868898">
+<testsuite name="tests\home\home.spec.ts" timestamp="2025-08-05T04:29:12.287Z" hostname="Desktop Chrome" tests="1" failures="0" skipped="0" time="6.386" errors="0">
+<testcase name="Should navigate to home page and display main title,
+  the user should see the main title with the correct text" classname="tests\home\home.spec.ts" time="6.386">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\..\test-results\tests-home-home-Should-nav-2341b-title-with-the-correct-text-Desktop-Chrome\test-finished-1.png]]
+
+[[ATTACHMENT|..\..\test-results\tests-home-home-Should-nav-2341b-title-with-the-correct-text-Desktop-Chrome\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

@@ -1,0 +1,136 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\miguel.a.coy.triana\\Documents\\Clean-Architecture-Angular-17\\acceptancetest\\playwright.config.ts",
+    "rootDir": "C:/Users/miguel.a.coy.triana/Documents/Clean-Architecture-Angular-17/acceptancetest",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "reports/xmlReport/results.xml"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/jsonReport/results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "reports/htmlReport",
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/miguel.a.coy.triana/Documents/Clean-Architecture-Angular-17/acceptancetest/test-results",
+        "repeatEach": 1,
+        "retries": 3,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Desktop Chrome",
+        "name": "Desktop Chrome",
+        "testDir": "C:/Users/miguel.a.coy.triana/Documents/Clean-Architecture-Angular-17/acceptancetest",
+        "testIgnore": [],
+        "testMatch": [
+          "*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.54.2",
+    "workers": 3,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "tests\\home\\home.spec.ts",
+      "file": "tests/home/home.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Should navigate to home page and display main title,\n  the user should see the main title with the correct text",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop Chrome",
+              "projectName": "Desktop Chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6386,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-05T04:29:14.318Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\miguel.a.coy.triana\\Documents\\Clean-Architecture-Angular-17\\acceptancetest\\test-results\\tests-home-home-Should-nav-2341b-title-with-the-correct-text-Desktop-Chrome\\test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\miguel.a.coy.triana\\Documents\\Clean-Architecture-Angular-17\\acceptancetest\\test-results\\tests-home-home-Should-nav-2341b-title-with-the-correct-text-Desktop-Chrome\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b877706789e4ff198a61-52c7ebd20eba65395ba3",
+          "file": "tests/home/home.spec.ts",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-08-05T04:29:12.233Z",
+    "duration": 10868.898,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

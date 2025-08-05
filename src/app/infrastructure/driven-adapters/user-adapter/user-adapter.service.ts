@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { UserGateway } from '@app/domain/models/user/gateways/user.gateway';
-import { UserDTO } from '@app/domain/models/user/user.dto';
-import { User } from '@app/domain/models/user/user.model';
+import { UserGateway } from '../../../domain/models/user/gateways/user.gateway';
+import { UserDTO } from '../../../domain/models/user/user.dto';
+import { User } from '../../../domain/models/user/user.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
+
 export class UserAdapterService extends UserGateway {
   constructor(private readonly _http: HttpClient) {
     super();

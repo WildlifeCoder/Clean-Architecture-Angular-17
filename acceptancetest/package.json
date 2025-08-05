@@ -1,0 +1,21 @@
+{
+  "name": "acceptancetest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "acceptancetest": "copy-files-from-to --mode production && npx run test-playwright",
+    "smoketest": "copy-files-from-to --mode production && npx playwright test home",
+    "acceptancetestlocal": "npx playwright test",
+    "playwright": "npx playwright install",
+    "show-report": "npx playwright show-report reports/htmlReport",
+    "test-home": "npx playwright test home"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "@types/node": "^24.2.0"
+  }
+}

@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
-import { UserGateway } from "@app/domain/models/user/gateways/user.gateway";
+import { UserGateway } from "../../../models/user/gateways/user.gateway";
+
 
 
 @Injectable({

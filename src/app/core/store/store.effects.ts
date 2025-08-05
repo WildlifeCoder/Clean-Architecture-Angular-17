@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { catchError, map, switchMap } from 'rxjs/operators';
-import { Observable, of } from 'rxjs';
+import { of } from 'rxjs';
 import { loadUsers, loadUsersFailure, loadUsersSuccess } from './store.actions';
-import { UserAdapterService } from '@app/infrastructure/driven-adapters/user-adapter/user-adapter.service';
+import { UserAdapterService } from '../../infrastructure/driven-adapters/user-adapter/user-adapter.service';
+
 
 
 @Injectable()
@@ -13,7 +14,7 @@ export class StoreEffects {
     private readonly _userAdapter: UserAdapterService
   ) {}
 
-  loadUsers$: Observable<any> = createEffect(() =>
+  loadUsers$ = createEffect(() =>
     this._actions$.pipe(
       ofType(loadUsers),
       switchMap(() => {
@@ -21,8 +22,7 @@ export class StoreEffects {
           map((res) => {
             return loadUsersSuccess({ users: res });
           }),
-          catchError((error) => {
-            console.log(error);
+          catchError((_error) => {
             return of(
               loadUsersFailure({
                 error: 'Error loading user',
@@ -33,17 +33,4 @@ export class StoreEffects {
       })
     )
   );
-
-  // loadStores$ = createEffect(() => {
-  //   return this.actions$.pipe(
-
-  //     ofType(StoreActions.loadStores),
-  //     concatMap(() =>
-  //       /** An EMPTY observable only emits completion. Replace with your own observable API request */
-  //       EMPTY.pipe(
-  //         map(data => StoreActions.loadStoresSuccess({ data })),
-  //         catchError(error => of(StoreActions.loadStoresFailure({ error }))))
-  //     )
-  //   );
-  // });
 }

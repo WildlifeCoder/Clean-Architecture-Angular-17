@@ -22,26 +22,29 @@
       "ES2022",
       "dom"
     ],
+    "baseUrl": "./src",
     "paths": {
       "@app/*": [
-        "./src/app/*"
+        "app/*"
       ],
       "@env/*": [
-        "./src/environments/*"
+        "environments/*"
       ],
       "@core/*": [
-        "./src/app/core/*"
+        "app/core/*"
       ],
-      "domain/*": [
-        "./src/app/domain/*"
+      "@domain/*": [
+        "app/domain/*"
       ],
-      "ui/*": [
-        "./src/app/ui/*"
+      "@ui/*": [
+        "app/ui/*"
       ],
-      "infrastructure/*": [
-        "./src/app/infrastructure/*"
+      "@infrastructure/*": [
+        "app/infrastructure/*"
       ],
-
+      "@shared/*": [
+        "app/shared/*"
+      ]
     }
   },
   "angularCompilerOptions": {
