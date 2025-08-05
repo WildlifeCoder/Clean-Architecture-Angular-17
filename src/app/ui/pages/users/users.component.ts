@@ -36,7 +36,7 @@ export class UsersComponent implements OnInit {
       .pipe(finalize(() => this.$isLoading.set(false)));
   }
 
-  userTrackByFn(index: number, user: User) {
+  userTrackByFn(user: User) {
     return user.id;
   }
 }

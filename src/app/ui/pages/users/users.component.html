@@ -1,27 +1,31 @@
-@let isLoading = $isLoading();
-
-<h2>Lista de usuarios</h2>
-
-@if ((users$ | async); as users) {
-
 <section>
-  @for (user of users; track userTrackByFn) {
-  <ul>
-    <li>
-      <h3>{{ user.name }}</h3>
-      <p>Username: {{ user.username }}</p>
-      <p>Email: {{ user.email }}</p>
-      <h4>Address</h4>
-      <p>Street: {{ user.address.street }}</p>
-      <p>Suite: {{ user.address.suite }}</p>
-      <p>City: {{ user.address.city }}</p>
-      <p>Zipcode: {{ user.address.zipcode }}</p>
-    </li>
-  </ul>
+  <h2 id="user-list-heading">Users List</h2>
+
+  @let isLoading = $isLoading();
+
+  @if ((users$ | async); as users) {
+    <div aria-labelledby="user-container">
+      <ul>
+        @for (user of users; track userTrackByFn(user)) {
+          <li>
+            <article aria-label="User details">
+              <h3>{{ user.name }}</h3>
+              <p><strong>Username:</strong> {{ user.username }}</p>
+              <p><strong>Email:</strong> {{ user.email }}</p>
+              <p><strong>Street:</strong> {{ user.address.street }}</p>
+              <p><strong>Suite:</strong> {{ user.address.suite }}</p>
+              <p><strong>City:</strong> {{ user.address.city }}</p>
+              <p><strong>Zipcode:</strong> {{ user.address.zipcode }}</p>
+            </article>
+          </li>
+        }
+      </ul>
+    </div>
+  } @else {
+    @if (isLoading) {
+      <p>Loading users...</p>
+    } @else {
+      <p>Users not found.</p>
+    }
   }
 </section>
-} @else { @if(isLoading) {
-<p>Loading users...</p>
-} @else {
-<p>No users found.</p>
-} }
