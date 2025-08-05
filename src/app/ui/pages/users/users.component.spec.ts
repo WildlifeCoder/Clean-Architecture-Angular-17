@@ -3,7 +3,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { of } from 'rxjs';
 import { UsersComponent } from './users.component';
-import { GetUserUsecase } from '../../../domain/usecases/user/get/get-user.usecase';
+import { GetUserUsecase } from '@domain/usecases/user/get/get-user.usecase';
 
 describe('UsersComponent', () => {
   let component: UsersComponent;

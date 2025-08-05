@@ -3,7 +3,7 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { catchError, map, switchMap } from 'rxjs/operators';
 import { of } from 'rxjs';
 import { loadUsers, loadUsersFailure, loadUsersSuccess } from './store.actions';
-import { UserAdapterService } from '../../infrastructure/driven-adapters/user-adapter/user-adapter.service';
+import { UserAdapterService } from '@infrastructure/driven-adapters/user-adapter/user-adapter.service';
 
 
 

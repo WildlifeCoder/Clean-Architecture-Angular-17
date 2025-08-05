@@ -8,7 +8,12 @@ import { UserGateway } from './domain/models/user/gateways/user.gateway';
 import { UserAdapterService } from './infrastructure/driven-adapters/user-adapter/user-adapter.service';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideHttpClient(withFetch()),
-    {provide: UserGateway, useClass: UserAdapterService},
-    provideRouter(routes), provideStore(), provideEffects()]
+  providers: [
+    provideRouter(routes),
+    provideHttpClient(withFetch()),
+    provideRouter(routes),
+    provideStore(),
+    provideEffects(),
+    // {provide: UserGateway, useClass: UserAdapterService},
+  ],
 };

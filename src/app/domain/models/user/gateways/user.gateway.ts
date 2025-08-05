@@ -6,9 +6,8 @@ import { UserDTO } from "../user.dto";
 
 
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
+
 export abstract class UserGateway {
   abstract getUsers(): Observable<User[]>;
   abstract getUserById(id: number): Observable<User>;

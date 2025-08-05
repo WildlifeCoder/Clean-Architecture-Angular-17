@@ -1,10 +1,10 @@
-import { UserGateway } from "../models/user/gateways/user.gateway";
-import { UserDTO } from "../models/user/user.dto";
+import { UserGateway } from '@app/domain/models/user/gateways/user.gateway';
+import { UserDTO } from '@app/domain/models/user/user.dto';
 
 export class UpdateUserUsecase {
-  constructor(private userGateway: UserGateway) {}
+  constructor(private readonly _userGateway: UserGateway) {}
 
   update(id: number, user: UserDTO) {
-    return this.userGateway.updateUser(id, user)
+    return this._userGateway.updateUser(id, user);
   }
 }

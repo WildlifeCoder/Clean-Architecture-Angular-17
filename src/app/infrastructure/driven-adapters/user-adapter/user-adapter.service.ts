@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { UserGateway } from '../../../domain/models/user/gateways/user.gateway';
-import { UserDTO } from '../../../domain/models/user/user.dto';
-import { User } from '../../../domain/models/user/user.model';
+import { UserGateway } from '@domain/models/user/gateways/user.gateway';
+import { UserDTO } from '@domain/models/user/user.dto';
+import { User } from '@domain/models/user/user.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 })
 
 export class UserAdapterService extends UserGateway {
+  private readonly _baseUrl = 'https://jsonplaceholder.typicode.com/users';
   constructor(private readonly _http: HttpClient) {
     super();
   }
@@ -25,6 +26,6 @@ export class UserAdapterService extends UserGateway {
   }
 
   getUsers(): Observable<User[]> {
-    return this._http.get<User[]>('https://jsonplaceholder.typicode.com/users');
+    return this._http.get<User[]>(this._baseUrl);
   }
 }

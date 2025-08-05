@@ -15,10 +15,10 @@ describe('StoreEffects', () => {
     TestBed.configureTestingModule({
       providers: [
         StoreEffects,
-            provideHttpClient(),
+        provideHttpClient(),
         provideHttpClientTesting(),
-        provideMockActions(() => actions$)
-      ]
+        provideMockActions(() => actions$),
+      ],
     });
 
     effects = TestBed.inject(StoreEffects);
