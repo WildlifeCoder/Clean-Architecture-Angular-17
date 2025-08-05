@@ -1,43 +1,91 @@
 <div class="home-container">
-  <header class="app-header">
+  <header class="app-header" role="banner">
     <h1 class="cool-title">Clean Architecture Guide with NgRx</h1>
   </header>
-  <main class="content">
-    <section class="introduction">
-      <h2>Introduction</h2>
+
+  <div class="content">
+    <section class="introduction" aria-labelledby="intro-title">
+      <h2 id="intro-title">Introduction</h2>
       <p>
-        This guide provides a practical introduction to employing clean architecture in Angular applications, leveraging NgRx for state management. Clean architecture promotes a well-organized and maintainable application structure with decoupled components.
-
-        **Benefits of Clean Architecture:**
-
-        * **Improved Maintainability:** Changes in one layer (presentation, core domain, or data access) don't ripple through others, making maintenance easier.
-        * **Enhanced Testability:** Core logic can be tested independently of framework specifics, leading to more reliable tests.
-        * **Increased Flexibility:** Easier to swap out frameworks or components without affecting core code, allowing for future adaptability.
+        This guide provides a practical introduction to employing clean
+        architecture in Angular applications, leveraging NgRx for state
+        management. Clean architecture promotes a well-organized and
+        maintainable application structure with decoupled components.
       </p>
-      <h3>Leveraging NgRx with Facades</h3>
+      <ul>
+        <li>
+          <strong>Improved Maintainability:</strong> Changes in one layer
+          (presentation, core domain, or data access) don't ripple through
+          others, making maintenance easier.
+        </li>
+        <li>
+          <strong>Enhanced Testability:</strong> Core logic can be tested
+          independently of framework specifics, leading to more reliable tests.
+        </li>
+        <li>
+          <strong>Increased Flexibility:</strong> Easier to swap out frameworks
+          or components without affecting core code, allowing for future
+          adaptability.
+        </li>
+      </ul>
+
+      <h3 id="facade-title">Leveraging NgRx with Facades</h3>
       <p>
-        This guide advocates for using the Facade Pattern with NgRx. The Facade Pattern provides a simplified interface to interact with NgRx functionalities within your components. It essentially acts as a mediator, hiding the complexities of NgRx (actions, reducers, selectors, effects) and offering a cleaner way to manage application state.
-
-        **Benefits of Facade Pattern in NgRx:**
-
-        * **Improved Component Readability:** Components interact with the Facade instead of directly managing NgRx actions and selectors, leading to cleaner and more focused components.
-        * **Decoupling:** Components are decoupled from the specific implementation details of NgRx, promoting better maintainability and testability.
-        * **Centralized State Access:** The Facade provides a central location for accessing and manipulating application state.
+        This guide advocates for using the Facade Pattern with NgRx. The Facade
+        Pattern provides a simplified interface to interact with NgRx
+        functionalities within your components. It essentially acts as a
+        mediator, hiding the complexities of NgRx (actions, reducers, selectors,
+        effects) and offering a cleaner way to manage application state.
       </p>
-      <h2>What is Clean Architecture?</h2>
+      <ul>
+        <li>
+          <strong>Improved Component Readability:</strong> Components interact
+          with the Facade instead of directly managing NgRx actions and
+          selectors, leading to cleaner and more focused components.
+        </li>
+        <li>
+          <strong>Decoupling:</strong> Components are decoupled from the
+          specific implementation details of NgRx, promoting better
+          maintainability and testability.
+        </li>
+        <li>
+          <strong>Centralized State Access:</strong> The Facade provides a
+          central location for accessing and manipulating application state.
+        </li>
+      </ul>
+
+      <h2 id="clean-arch-title">What is Clean Architecture?</h2>
       <p>
-        Clean architecture is a software design approach that separates the business logic from the framework-specific details. The core domain contains application rules and logic, while the presentation and data access layers handle framework interaction and data persistence. This separation enables independent development and testing of each layer, leading to a more resilient and adaptable application.
+        Clean architecture is a software design approach that separates the
+        business logic from the framework-specific details. The core domain
+        contains application rules and logic, while the presentation and data
+        access layers handle framework interaction and data persistence. This
+        separation enables independent development and testing of each layer,
+        leading to a more resilient and adaptable application.
+      </p>
+      <ul>
+        <li>
+          <strong>Presentation Layer:</strong> Responsible for user interface
+          elements, routing, and framework-specific interactions.
+        </li>
+        <li>
+          <strong>Core Domain:</strong> Contains application rules, logic, and
+          entities independent of frameworks.
+        </li>
+        <li>
+          <strong>Data Access Layer:</strong> Handles data persistence and
+          retrieval, interacting with databases or APIs.
+        </li>
+      </ul>
+    </section>
 
-        **Layers in Clean Architecture:**
-
-        * **Presentation Layer:** Responsible for user interface elements, routing, and framework-specific interactions.
-        * **Core Domain:** Contains application rules, logic, and entities independent of frameworks.
-        * **Data Access Layer:** Handles data persistence and retrieval, interacting with databases or APIs.
+    <section class="cta" aria-labelledby="cta-title">
+      <h3 id="cta-title">Get Started</h3>
+      <p>
+        <a routerLink="/guide" class="cta-link"
+          >Learn More About Clean Architecture</a
+        >
       </p>
     </section>
-    <section class="cta">
-      <h3>Get Started</h3>
-      <a routerLink="/guide">Learn More About Clean Architecture</a>
-    </section>
-  </main>
+  </div>
 </div>

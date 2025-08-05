@@ -6,24 +6,24 @@ import { User } from '@app/domain/models/user/user.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserAdapterService extends UserGateway {
-  constructor(private http: HttpClient) { super();}
-
-   getUserById(id: number): Observable<User> {
-    throw new Error('Method not implemented.');
-  }
-   createUser(user: UserDTO): Observable<User> {
-    throw new Error('Method not implemented.');
-  }
-   updateUser(id: number, user: UserDTO): Observable<User> {
-    throw new Error('Method not implemented.');
+  constructor(private readonly _http: HttpClient) {
+    super();
   }
 
-
+  getUserById(id: number): Observable<User> {
+    throw new Error('Method not implemented.');
+  }
+  createUser(user: UserDTO): Observable<User> {
+    throw new Error('Method not implemented.');
+  }
+  updateUser(id: number, user: UserDTO): Observable<User> {
+    throw new Error('Method not implemented.');
+  }
 
   getUsers(): Observable<User[]> {
-   return this.http.get<User[]>('https://jsonplaceholder.typicode.com/users');
+    return this._http.get<User[]>('https://jsonplaceholder.typicode.com/users');
   }
 }
