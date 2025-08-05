@@ -7,12 +7,11 @@ import { UserAdapterService } from '@app/infrastructure/driven-adapters/user-ada
 import { Observable, of } from 'rxjs';
 
 @Component({
-  selector: 'app-users',
-  standalone: true,
-  imports: [CommonModule],
-  providers: [],
-  templateUrl: './users.component.html',
-  styleUrl: './users.component.scss'
+    selector: 'app-users',
+    imports: [CommonModule],
+    providers: [],
+    templateUrl: './users.component.html',
+    styleUrl: './users.component.scss'
 })
 export class UsersComponent implements OnInit {
 
